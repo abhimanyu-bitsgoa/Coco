@@ -360,7 +360,11 @@ class MFRC522:
       print("Error while reading!")
     i = 0
     if len(backData) == 16:
-      print("Sector "+str(blockAddr)+" "+str(backData))
+      ret = ""
+      for i in range (0,6):
+        ret+=str(backData[i])
+      #print("Sector "+str(blockAddr)+" "+str(backData[0:6]))
+      return ret
   
   def MFRC522_Write(self, blockAddr, writeData):
     buff = []
