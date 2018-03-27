@@ -55,5 +55,6 @@ def scanFace():
 
             if scannedName!='#':
                 print(scannedName)
-                # return scannedName
+                return scannedName
             # print("I see someone named {}!".format(name))
+scanFace()

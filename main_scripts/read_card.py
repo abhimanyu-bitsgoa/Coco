@@ -86,3 +86,4 @@ def scanCard():
             else:
                 print("Authentication error")
                 return '#'
+scanCard()
