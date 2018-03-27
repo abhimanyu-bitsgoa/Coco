@@ -57,4 +57,3 @@ def scanFace():
                 print(scannedName)
                 # return scannedName
             # print("I see someone named {}!".format(name))
-scanFace()
