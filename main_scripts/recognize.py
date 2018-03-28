@@ -5,6 +5,14 @@ import numpy as np
 import os
 
 ENCODING_PATH="../imageEncodings/"
+flag="1"
+def checkLock():
+    global flag
+    f=open('lock','r')
+    temp=''
+    data = temp.join(f.read().split('\n'))
+    flag=data
+    f.close()
 
 def loadDataset(dataset,nameset):
     directory = os.fsencode(ENCODING_PATH)
@@ -18,6 +26,7 @@ def loadDataset(dataset,nameset):
 
 
 def scanFace():
+    global flag
     camera = picamera.PiCamera()
     camera.resolution = (320, 240)
     output = np.empty((240, 320, 3), dtype=np.uint8)
@@ -35,7 +44,8 @@ def scanFace():
     nameset=[]
     loadDataset(dataset,nameset)
     print("Please face the camera")
-    while True:
+    while flag=="1":
+        checkLock()
         # Grab a single frame of video from the RPi camera as a numpy array
         camera.capture(output, format="rgb")
 

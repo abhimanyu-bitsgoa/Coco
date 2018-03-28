@@ -6,7 +6,16 @@
 import subprocess
 import threading
 import os
-empl_id='$' 
+empl_id='$'
+
+def createLock():
+	f= open("lock","w+")
+	f.write("1")
+	f.close()
+def stopModules():
+	f=open("lock","w")
+	f.write("0")
+	f.close()
 def task1():
 	global empl_id
 	ls_output = subprocess.check_output(['python3', 'recognize.py'])
@@ -29,8 +38,9 @@ def task2():
  
     # creating threads
 def startScan():
-	t1 = threading.Thread(target=task1,)
-	t2 = threading.Thread(target=task2,)  
+	createLock()
+	t1 = threading.Thread(target=task1)
+	t2 = threading.Thread(target=task2)  
 	t1.setDaemon(True)
 	t2.setDaemon(True)
 	# starting threads
@@ -38,10 +48,13 @@ def startScan():
 	t2.start()
 
 	# wait until all threads finish
-	# t1.join()
-	# t2.join()
+	#t1.join()
+	#t2.join()
 	while empl_id=='$':
-		print("!")
+		#print("!")
+		pass
+
 	print("I am printing",empl_id)
+	stopModules()
 	return empl_id
 startScan()
