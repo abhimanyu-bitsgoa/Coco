@@ -3,9 +3,11 @@
 # NOTE: this example requires PyAudio because it uses the Microphone class
 
 import speech_recognition as sr
-import listen
+import speak as sp
+import listen as ls
 # obtain audio from the microphone
 r = sr.Recognizer()
+sp.say("Wake me up by saying coco")
 while True:
     with sr.Microphone(None,48000,1024) as source:
         audio = r.listen(source,None,3,None)
@@ -17,14 +19,15 @@ while True:
         #print("Google Speech Recognition thinks you said " + r.recognize_google(audio))
 
         # print("Processing")
-        message='###'
+        message='#'
         message=r.recognize_google(audio)
-        # print(message)
         if message=='coco':
-            listen.listenCommands()
+            ls.listenCommands()
     except sr.UnknownValueError:
-        print("")
+        sp.say("I beg your pardon")
+        print("I can't hear you properly")
         
     except sr.RequestError as e:
+        sp.say("There is no internet connection")
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
