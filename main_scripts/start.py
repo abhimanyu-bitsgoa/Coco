@@ -25,6 +25,7 @@ while True:
         message=r.recognize_google(audio)
         if message=='coco':
             ls.listenCommands()
+            break
     except sr.UnknownValueError:
         sp.say("I beg your pardon")
         print("I can't hear you properly")
