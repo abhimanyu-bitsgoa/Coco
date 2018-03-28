@@ -44,6 +44,7 @@ def scanFace():
     nameset=[]
     loadDataset(dataset,nameset)
     print("Please face the camera")
+    scannedName="#"
     while flag=="1":
         checkLock()
         # Grab a single frame of video from the RPi camera as a numpy array
@@ -57,7 +58,6 @@ def scanFace():
         for face_encoding in face_encodings:
             # See if the face is a match for the known face(s)
             match = face_recognition.compare_faces(dataset, face_encoding)
-            scannedName = "#"
             for name,status in zip(nameset,match):
                 if status==True:
                     scannedName = name
@@ -65,7 +65,10 @@ def scanFace():
 
             if scannedName!='#':
                 print(scannedName)
-                return scannedName
+                flag="0"
+                break
+    camera.close()
+    return scannedName
             # print("I see someone named {}!".format(name))
 if __name__ == '__main__':
     scanFace()
