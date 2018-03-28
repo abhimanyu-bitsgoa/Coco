@@ -95,4 +95,5 @@ def scanCard():
             else:
                 print("Authentication error")
                 return '#'
-scanCard()
+if __name__ == '__main__':
+    scanCard()

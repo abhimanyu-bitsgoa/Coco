@@ -67,4 +67,5 @@ def scanFace():
                 print(scannedName)
                 return scannedName
             # print("I see someone named {}!".format(name))
-scanFace()
+if __name__ == '__main__':
+    scanFace()

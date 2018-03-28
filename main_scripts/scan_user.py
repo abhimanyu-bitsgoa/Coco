@@ -13,6 +13,7 @@ def createLock():
 		f= open("lock","w+")
 		f.write("1")
 		f.close()
+		print("Granting module access")
 	except:
 		print("File writing failed")
 def stopModules():
@@ -69,4 +70,4 @@ def startScan():
 	print("I am printing",empl_id)
 	stopModules()
 	return empl_id
-startScan()
+#startScan()

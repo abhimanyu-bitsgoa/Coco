@@ -5,9 +5,11 @@
 import speech_recognition as sr
 import speak as sp
 import listen as ls
+#from scan_user import createLock
 # obtain audio from the microphone
 r = sr.Recognizer()
 sp.say("Wake me up by saying coco")
+#createLock()
 while True:
     with sr.Microphone(None,48000,1024) as source:
         audio = r.listen(source,None,3,None)
