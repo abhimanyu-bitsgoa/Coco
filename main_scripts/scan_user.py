@@ -9,24 +9,36 @@ import os
 empl_id='$'
 
 def createLock():
-	f= open("lock","w+")
-	f.write("1")
-	f.close()
+	try:
+		f= open("lock","w+")
+		f.write("1")
+		f.close()
+	except:
+		print("File writing failed")
 def stopModules():
-	f=open("lock","w")
-	f.write("0")
-	f.close()
+	try:
+		f=open("lock","w")
+		f.write("0")
+		f.close()
+	except:
+		print("File writing while stopping failed")
 def task1():
 	global empl_id
-	ls_output = subprocess.check_output(['python3', 'recognize.py'])
-	print("Output is  = ",ls_output) 
-	empl_id=ls_output
+	try:
+		ls_output = subprocess.check_output(['python3', 'recognize.py'])
+		print("Output is  = ",ls_output) 
+		empl_id=ls_output
+	except:
+		print("camera is happy!")
  
 def task2():
 	global empl_id
-	ls_output = subprocess.check_output(['python3', 'read_card.py'])
-	print("Output is  = ",ls_output) 
-	empl_id=ls_output
+	try:
+		ls_output = subprocess.check_output(['python3', 'read_card.py'])
+		print("Output is  = ",ls_output) 
+		empl_id=ls_output
+	except:
+		print("RFID is happy!")
  
 # if __name__ == "__main__":
  
