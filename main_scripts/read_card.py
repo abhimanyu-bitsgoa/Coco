@@ -29,7 +29,7 @@ continue_reading = True
 
 flag="1"
 def checkLock():
-    global flag
+    flag="1"
     f=open('lock','r')
     temp=''
     data = temp.join(f.read().split('\n'))
@@ -57,7 +57,7 @@ def scanCard():
 
     # This loop keeps checking for chips. If one is near it will get the UID and authenticate
     while continue_reading and flag=="1":
-        checkLock()
+        #checkLock()
         # Scan for cards    
         (status,TagType) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQIDL)
 
@@ -95,5 +95,6 @@ def scanCard():
             else:
                 print("Authentication error")
                 return '#'
+    return '#'
 if __name__ == '__main__':
     scanCard()

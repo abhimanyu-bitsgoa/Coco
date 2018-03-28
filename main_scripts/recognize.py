@@ -3,7 +3,7 @@ import face_recognition
 import picamera
 import numpy as np
 import os
-
+from speak import say
 ENCODING_PATH="../imageEncodings/"
 flag="1"
 def checkLock():
@@ -26,7 +26,7 @@ def loadDataset(dataset,nameset):
 
 
 def scanFace():
-    global flag
+    flag="1"
     camera = picamera.PiCamera()
     camera.resolution = (320, 240)
     output = np.empty((240, 320, 3), dtype=np.uint8)
@@ -44,9 +44,10 @@ def scanFace():
     nameset=[]
     loadDataset(dataset,nameset)
     print("Please face the camera")
+    say("Please face the camera")
     scannedName="#"
     while flag=="1":
-        checkLock()
+        #checkLock()
         # Grab a single frame of video from the RPi camera as a numpy array
         camera.capture(output, format="rgb")
 
@@ -68,6 +69,7 @@ def scanFace():
                 flag="0"
                 break
     camera.close()
+    say(scannedName)
     return scannedName
             # print("I see someone named {}!".format(name))
 if __name__ == '__main__':

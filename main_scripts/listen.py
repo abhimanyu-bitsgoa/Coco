@@ -2,7 +2,6 @@ import speech_recognition as sr
 import speak as sp
 from recognize import scanFace
 from read_card import scanCard
-from scan_user import startScan
 from jokes import joke
 def listenCommands():
 		# obtain audio from the microphone
@@ -19,13 +18,13 @@ def listenCommands():
 					if message=='read face':
 						sp.say("Starting Camera, please wait")
 						print("Read face!")
-						scanFace()
+						print(" Face is ",scanFace())
 					elif message=='read card':
 						sp.say("Starting card reader, please wait")
 						print("Read card!")
 						ans=scanCard()
 						print(" this is my data ", ans)
-					elif message=='fun':
+					elif message=='joke':
 						jokeText=joke()
 						print(jokeText)
 						sp.say(jokeText)
