@@ -28,9 +28,9 @@ while True:
             break
     except sr.UnknownValueError:
         sp.say("I beg your pardon")
-        print("I can't hear you properly")
+        print("I beg your pardon")
         
     except sr.RequestError as e:
-        sp.say("There is no internet connection")
-        print("Could not request results from Google Speech Recognition service; {0}".format(e))
+        sp.say("There is some problem with the internet connection")
+        print("There is some problem with the internet connection")
 
