@@ -8,6 +8,7 @@ import listen as ls
 #from scan_user import createLock
 # obtain audio from the microphone
 r = sr.Recognizer()
+print("Wake me up by saying coco")
 sp.say("Wake me up by saying coco")
 #createLock()
 while True:
@@ -27,8 +28,9 @@ while True:
             ls.listenCommands()
             break
     except sr.UnknownValueError:
-        sp.say("I beg your pardon")
-        print("I beg your pardon")
+        #sp.say("I beg your pardon")
+        #print("I beg your pardon")
+        pass
         
     except sr.RequestError as e:
         sp.say("There is some problem with the internet connection")

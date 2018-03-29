@@ -12,10 +12,10 @@ def getHeadlines():
     if data["status"] != "error":
         articles = data["articles"]
         for article in articles:
-            print(colored(unidecode(article["title"]),'green'))
+            #print(colored(unidecode(article["title"]),'green'))
             if article["description"] is not None:
                 headline=unidecode(article["description"])
-                print(headline)
+                #print(headline)
                 return headline
                 #print(colored(article["url"],'yellow'))
                 #print(" ")

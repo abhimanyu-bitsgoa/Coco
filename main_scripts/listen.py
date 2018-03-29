@@ -41,7 +41,7 @@ def listenCommands():
                                         elif message=='joke':
                                                 jokeText=joke()
                                                 print(jokeText)
-                                                sp.say(jokeText)
+                                                sp.say(jokeText+" Haha Haha Haha")
                                         elif message=='news':
                                                 news=getHeadlines()
                                                 print(news)
@@ -51,8 +51,9 @@ def listenCommands():
                                                 print("Bye!")
                                                 return
                                         else:
-                                                sp.say("Invalid command")
-                                                print("Invalid command")
+                                                meaning=findMeaning(message)
+                                                sp.say(meaning)
+                                                print(meaning)
                                 except sr.UnknownValueError:
                                                 sp.say("I beg your pardon!")
                                                 print("I beg your pardon!")

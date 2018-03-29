@@ -1,7 +1,7 @@
 from pymongo import MongoClient # import mongo client to connect  
 
 def sendDb(emplid,location,time):
-	client = MongoClient('mongodb://192.168.0.126:27017')  
+	client = MongoClient('mongodb://192.168.43.95:27017')  
 	print ("connected to db")
 	# Creating database  
 	db = client.db4  
