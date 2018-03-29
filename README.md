@@ -103,7 +103,7 @@ Since the product is supposed to be used on car's dashboards, therefore we made 
 
 ***Solution:*** We developed proper documentation and automated scripts to get back with the full installation in a short span of time. Additionally we will be developing a master script that will install the entire codebase with a single command, taking care of all the dependencies.
 
-**Challenge: ** The hardware devices were not communicating with each other properly.
+***Challenge***:  The hardware devices were not communicating with each other properly.
 
 ***Solution:*** We gained a deep understanding of Raspberry Pi and various modules before interfacing them with each other and didn't put much load on the CPU by efficient coding style ( For instance, Avoiding system calls wherever possible). Also we gained knowledge about serial port manipulation, configuration files and raspbian environment while completing the project.
 
