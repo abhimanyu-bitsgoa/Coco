@@ -17,7 +17,7 @@ Now here comes the problem:
 To tackle the above problem we developed **Coco**, A completely customizable and Open Source Taxi companion. Now let's see how Coco will be solving the above problems along with taking your Cab riding experience to a next level.Let's have a look that her functionalities:
 
 * She is completely **voice controlled**. That means you don't need a display to interact with her and you can use her while driving. Also she is going to guide you at every step by verbose responses.
-* She can recognize a person entering in the cab with the help of a camera module with an accuracy of ***99.38%***.
+* She can recognize a person entering in the cab (realtime) with the help of a camera module with an accuracy of ***99.38%***.
 * She has a RFID reader that can read the passanger's card to make their attendence.
 * She can log your GPS location accurately and can tell you the excat address and time from where you boarded the cab and vice - versa.
 * She has a great sense of humour ( say "**Joke**")
@@ -71,8 +71,50 @@ We have designed this project in accordance with smart software paradigms to inc
 
 
 
-## FAQ ##
+## Interview with the Developers ##
 
 **Q.** *Does the project work and solve the problem it is aimed at?*
 
 **A.** Yes! Coco can successfully detect a person and make an entry into the database along with the location and timestamp, thereby solving the original problem use case. Additionally we were able to integrate **Joke**, **News** and **Dictionary** feature in the month's time frame all using just basic python libraries.
+
+**Q.** *Did you take care of the user experience and maintainable code?*
+
+**A.** Like we said, developing Coco was tough but we always kept people who will be using it and people who will be developing it in our minds.
+Since the product is supposed to be used on car's dashboards, therefore we made it completely headless, and the entire Pi will be controlled by voice, giving out verbose instructions to the user.Also we used modular approach in designing this code, so that maintenence is easier later on.
+
+**Q.** *Is your solution feasible for production?*
+
+**A.** Right from the prototyping phase, we paid special attention towards the cost and the scalability of our application. We questioned ourself at every step of the project as to whether the current feature will be able to perfrom well when it will come to production. For instance,**This is the main reason why we have not used any ready made voice assistants available in the market and decided to use simple python STT library to build our project.** So straight from the prototyping phase we pictured our product for production and worked accordingly.Also with small tweaks in the code, **our product can scale up to multicore architecture ( Camera module ).**
+
+**Q.** *So what next ?*
+
+**A.** In the course of the hackathon we have developed an independent open source python bases voice assistant that is easy to setup and work with. Therefore we are planning to develop it further with richer set of feature and since the code is modular any additional new features can be added pretty easily.
+
+
+
+##  Challenges faced ##
+
+***Challenge:*** The image files required for the face recognition allocates huge amount of memory for a portable device.
+
+***Solution:*** We converted images to .npy arrays and used them directly and we were able to achieve a compression rate of ***<u>95%</u>*** per file ( from 18 KB to 1 KB )
+
+***Challenge:*** Our entire SD card got corrupted a week before.
+
+***Solution:*** We developed proper documentation and automated scripts to get back with the full installation in a short span of time. Additionally we will be developing a master script that will install the entire codebase with a single command, taking care of all the dependencies.
+
+**Challenge: ** The hardware devices were not communicating with each other properly.
+
+***Solution:*** We gained a deep understanding of Raspberry Pi and various modules before interfacing them with each other and didn't put much load on the CPU by efficient coding style ( For instance, Avoiding system calls wherever possible). Also we gained knowledge about serial port manipulation, configuration files and raspbian environment while completing the project.
+
+***Challenge***: Limited computational resources on Raspberry Pi.
+
+***Solution:*** We had to gracefully shutdown all the zombie resources in the system, to keep up with the performance on the system.
+
+
+
+## Team ##
+
+* [Abhimanyu Singh Shekhawat](https://www.linkedin.com/in/abhimanyubitsgoa/)
+* [Jainam Shah](https://www.linkedin.com/in/shahjainam023/)
+* [GV Sandeep](https://www.linkedin.com/in/greetsandeep/)
+
