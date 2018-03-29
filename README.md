@@ -17,7 +17,7 @@ Now here comes the problem:
 To tackle the above problem we developed **Coco**, A completely customizable and Open Source Taxi companion. Now let's see how Coco will be solving the above problems along with taking your Cab riding experience to a next level.Let's have a look that her functionalities:
 
 * She is completely **voice controlled**. That means you don't need a display to interact with her and you can use her while driving. Also she is going to guide you at every step by verbose responses.
-* She can recognize a person entering in the cab (realtime) with the help of a camera module with an accuracy of ***99.38%***.
+* She can recognize a person entering in the cab (realtime) with the help of a camera module with an accuracy of **99.38%**.
 * She has a RFID reader that can read the passanger's card to make their attendence.
 * She can log your GPS location accurately and can tell you the excat address and time from where you boarded the cab and vice - versa.
 * She has a great sense of humour ( say "**Joke**")
