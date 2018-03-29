@@ -46,6 +46,7 @@ We are giving stepwise instructions for developing Coco from scratch! ***<u>Don'
 * [Adding GPS](https://github.com/abhimanyu-bitsgoa/Coco/wiki/GPS-Module)
 * [Adding RFID](https://github.com/abhimanyu-bitsgoa/Coco/wiki/RFID)
 * [Helper Scripts](https://github.com/abhimanyu-bitsgoa/Coco/wiki/Asgard:-SSH-tunnel-for-Pi)
+* [Setting MongoDB](https://github.com/abhimanyu-bitsgoa/Coco/wiki/MongoDB)
 * [Pin Diagram](https://drive.google.com/file/d/1cki_2bnYLimEntTy9uSepCbNUCva041G/view)
 
 
