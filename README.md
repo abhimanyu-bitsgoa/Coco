@@ -2,7 +2,7 @@
 
 We are ready with our final product for PayPal's month long Raspeberry Pi hackathon. It was a tough job designing this product but when we look at it now, we know it was worth it. So we are going to see this project step by step and by the end, you will be able to make this project straight from scratch. Good luck 😉 
 
-### The Problem: Cabs at PayPal ###
+# The Problem: Cabs at PayPal #
 
 PayPal is a great place to work. It loves its employees (**PyPl**) so much that it provides them with a free cab drop and pick up services from their homes to the office and back. But here is a small problem that comes up. The Taxi contractors need to maintain a daily log of the number of people using the cab and therefore the driver passes a thick register to every person sitting inside the Taxi to fill their details every time.
 Now here comes the problem:
@@ -12,7 +12,7 @@ Now here comes the problem:
 
 
 
-### The Solution: *<u>Coco</u>* ###
+# The Solution: *<u>Coco</u>* #
 
 To tackle the above problem we developed **Coco**, A completely customizable and Open Source Taxi companion. Now let's see how Coco will be solving the above problems along with taking your Cab riding experience to a next level.Let's have a look that her functionalities:
 
@@ -26,7 +26,7 @@ To tackle the above problem we developed **Coco**, A completely customizable and
 
 
 
-### Modules used: ###
+# Modules used: #
 
 * [PiCamera module](https://www.amazon.in/Raspberry-5MP-Camera-Board-Module/dp/B00E1GGE40?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=2a6ca201-f55d-43ad-af12-dcfd500d164b)
 * [USB Microphone](https://www.amazon.in/gp/product/B06VWBYVVP/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)
@@ -51,7 +51,7 @@ We are giving stepwise instructions for developing Coco from scratch! ***<u>Don'
 
 
 
-## Running the code ##
+# Running the code #
 
 * Clone the repository.
 * `cd Coco/main_scripts/`
@@ -61,7 +61,7 @@ We are giving stepwise instructions for developing Coco from scratch! ***<u>Don'
 
 
 
-## Understanding the Code ## 
+# Understanding the Code # 
 
 We have designed this project in accordance with smart software paradigms to increase the maintainability of our code base. Some of the salient feature of the project are:
 
@@ -72,7 +72,7 @@ We have designed this project in accordance with smart software paradigms to inc
 
 
 
-## Interview with the Developers ##
+# Interview with the Developers #
 
 **Q.** *Does the project work and solve the problem it is aimed at?*
 
@@ -93,7 +93,7 @@ Since the product is supposed to be used on car's dashboards, therefore we made 
 
 
 
-##  Challenges faced ##
+#  Challenges faced #
 
 ***Challenge:*** The image files required for the face recognition allocates huge amount of memory for a portable device.
 
@@ -113,7 +113,7 @@ Since the product is supposed to be used on car's dashboards, therefore we made 
 
 
 
-## Team ##
+# Team #
 
 * [Abhimanyu Singh Shekhawat](https://www.linkedin.com/in/abhimanyubitsgoa/)
 * [Jainam Shah](https://www.linkedin.com/in/shahjainam023/)
