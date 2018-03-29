@@ -1,30 +1,78 @@
-# Coco #
+# Introduction #
 
-#### Who is Coco? ####
+We are ready with our final product for PayPal's month long Raspeberry Pi hackathon. It was a tough job designing this product but when we look at it now, we know it was worth it. So we are going to see this project step by step and by the end, you will be able to make this project straight from scratch. Good luck 😉 
 
-Gone are the days of the boring taxi rides. Now take hold of your time with an intelligent and amazing companion, Coco. 
+### The Problem: Cabs at PayPal ###
 
-Coco is a completely customizable and open source Taxi management suite. For the starters she has a great sense of humour("_knock knock_"). Currently she is solving an open problem of manual entries in office cabs.
+PayPal is a great place to work. It loves its employees (**PyPl**) so much that it provides them with a free cab drop and pick up services from their homes to the office and back. But here is a small problem that comes up. The Taxi contractors need to maintain a daily log of the number of people using the cab and therefore the driver passes a thick register to every person sitting inside the Taxi to fill their details every time.
+Now here comes the problem:
 
-#### Cabs at PayPal ####
-
-PayPal is a great place to work. It loves its employees (PyPl) so much that it provides them with a free cab drop and pick up services from their homes to the office and back. But here is a small problem that comes up. The Taxi contractors need to maintain a daily log of the number of people using the cab and therefore the driver passes a thick register to every person sitting inside the Taxi to fill their details every time.
-
-This is where Coco comes to rescue.
-
-#### Solving the problem ####
-
-Coco will be augmented with:
-
-* Camera module.
-* RFID sensor.
-* GPS module.
-* Microphone.
-
-The entire Raspberry Pi will be controlled by user's voice and the users will have to scan their ID cards as well as faces for the entry. The entire process will be augmented by verbose responses from the Pi, instructing the user at every step. With every entry the Pi will attach a time stamp and location of the user boarding the taxi and will send it to a database online.
-
-Coco is capable of learning new tricks really fast and hence you can add new functionalities to her with minimal programming.
+* The passangers need to make the entry in the moving cab and it becomes a clumpsy affair.
+* We are living in 2018, why waster paper?
 
 
 
+### The Solution: *<u>Coco</u>* ###
 
+To tackle the above problem we developed **Coco**, A completely customizable and Open Source Taxi companion. Now let's see how Coco will be solving the above problems along with taking your Cab riding experience to a next level.Let's have a look that her functionalities:
+
+* She is completely **voice controlled**. That means you don't need a display to interact with her and you can use her while driving. Also she is going to guide you at every step by verbose responses.
+* She can recognize a person entering in the cab with the help of a camera module with an accuracy of ***99.38%***.
+* She has a RFID reader that can read the passanger's card to make their attendence.
+* She can log your GPS location accurately and can tell you the excat address and time from where you boarded the cab and vice - versa.
+* She has a great sense of humour ( say "**Joke**")
+* She can help you lookup for any english word meaning (say " *word*")
+* She will read out the latest news headlines for you ( say "**News**")
+
+
+
+### Modules used: ###
+
+* [PiCamera module](https://www.amazon.in/Raspberry-5MP-Camera-Board-Module/dp/B00E1GGE40?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=2a6ca201-f55d-43ad-af12-dcfd500d164b)
+* [USB Microphone](https://www.amazon.in/gp/product/B06VWBYVVP/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)
+* [GPS module](https://www.ebay.in/itm/331757723713?aff_source=Sok-Goog)
+* [RFID reader](https://www.amazon.in/Keychain-RC522-Sensor-Module-Fudan/dp/B00MP4CN2C?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=2a6ca201-f55d-43ad-af12-dcfd500d164b)
+* [RaspberryPi Model-3B](https://www.amazon.in/RASPBERRY-MODEL-INBULT-BLUETOOTH-Wifi/dp/B01G882L3G/ref=sr_1_2?s=industrial&ie=UTF8&qid=1522333204&sr=1-2&keywords=raspberry+pi+3+kit)
+
+
+
+# Getting Started #
+
+We are giving stepwise instructions for developing Coco from scratch! ***<u>Don't forget to check the Wiki Tab.</u>***
+
+* [Initialising the Pi](https://github.com/abhimanyu-bitsgoa/Coco/wiki/Initialising-the-Pi)
+* [Adding Face recognition](https://github.com/abhimanyu-bitsgoa/Coco/wiki/Camera)
+* [Adding Voice recognition](https://github.com/abhimanyu-bitsgoa/Coco/wiki/Voice)
+* [Adding GPS](https://github.com/abhimanyu-bitsgoa/Coco/wiki/GPS-Module)
+* [Adding RFID](https://github.com/abhimanyu-bitsgoa/Coco/wiki/RFID)
+* [Helper Scripts](https://github.com/abhimanyu-bitsgoa/Coco/wiki/Asgard:-SSH-tunnel-for-Pi)
+* [Pin Diagram](https://drive.google.com/file/d/1cki_2bnYLimEntTy9uSepCbNUCva041G/view)
+
+
+
+## Running the code ##
+
+* Clone the repository.
+* `cd Coco/main_scripts/`
+* `sudo su`
+* `./run_coco.sh`
+* Now follow the voice instructions given by the Pi. ( Wake up word "**Coco**")
+
+
+
+## Understanding the Code ## 
+
+We have designed this project in accordance with smart software paradigms to increase the maintainability of our code base. Some of the salient feature of the project are:
+
+* A completly modular approach. All the features are completely separated out into logical modules to ease management and curb redundancy.
+* We have used Open Source tools for most of our tasks and nearly all our tools are developed just with basic python libraries.
+* We have kept the OS calls to the minimum while calling various internal scripts, rather we fiddled with the source code of the base libraries to directly use them.
+* Please check the [flow diagram](https://drive.google.com/file/d/1a9uC6f2SoihsYGOX5DaV4x78eyz1eieF/view) to see how things work together.
+
+
+
+## FAQ ##
+
+**Q.** *Does the project work and solve the problem it is aimed at?*
+
+**A.** Yes! Coco can successfully detect a person and make an entry into the database along with the location and timestamp, thereby solving the original problem use case. Additionally we were able to integrate **Joke**, **News** and **Dictionary** feature in the month's time frame all using just basic python libraries.
