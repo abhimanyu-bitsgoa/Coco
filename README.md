@@ -1,6 +1,6 @@
 # Introduction #
 
-We are ready with our final product for PayPal's month long Raspeberry Pi hackathon. It was a tough job designing this product but when we look at it now, we know it was worth it. So we are going to see this project step by step and by the end, you will be able to make this project straight from scratch. Good luck 😉 
+We are ready with our final product for PayPal's month long Raspeberry Pi Innovation Challenge. It was a tough job designing this product but when we look at it now, we know it was worth it. So we are going to see this project step by step and by the end, you will be able to make this project straight from scratch. Good luck 😉 
 
 # The Problem: Cabs at PayPal #
 
